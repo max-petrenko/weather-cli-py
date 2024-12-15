@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+skip-string-normalization = false
+
+[tool.poetry]
+name = "weather-cli"
+version = "0.1.0"
+description = "A command-line tool to fetch weather data using OpenWeatherMap API"
+authors = ["Maksym Petrenko"]
+dependencies = [
+    "requests",
+    "click",
+    "termcolor",
+]
+
+[tool.poetry.scripts]
+weather-cli = "weather:main"
